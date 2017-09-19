@@ -1,0 +1,58 @@
+#message_text {
+    resize: none;
+}
+#message_form {
+    width: 450px;
+    margin-top: 6%;
+    border: 2px solid red;
+}
+#message_div {
+    margin-top: 40px;
+    border: 2px solid red;
+}
+
+#header {
+    overflow: hidden;
+    background-color: #333;
+    left: 0;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    text-align: center;
+    height: 10%;
+}
+
+#header a {
+    /*border: 2px solid red;*/
+
+    width: 10%;
+    height: 60%;
+    vertical-align: middle;
+    top: 0;
+    /*margin: 5%, 0px;*/
+    display: inline-block;
+    color: rgb(200,200,200);
+    text-align: center;
+    padding: 16px 27.9px;
+    text-decoration: none;
+}
+
+#header a:hover, a:active {
+  color: rgb(255,255,255);
+  background-color: rgb(100,100,100);
+}
+
+
+/*ul {
+  align-self: center;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  width: 24%;
+  height: 100%;
+  border: 5px solid red;
+
+}
+*/
