@@ -1,58 +1,165 @@
-#message_text {
-    resize: none;
-}
-#message_form {
-    width: 450px;
-    margin-top: 6%;
-    border: 2px solid red;
-}
-#message_div {
-    margin-top: 40px;
-    border: 2px solid red;
-}
-
-#header {
-    overflow: hidden;
-    background-color: #333;
-    left: 0;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    text-align: center;
-    height: 10%;
-}
-
-#header a {
-    /*border: 2px solid red;*/
-
-    width: 10%;
-    height: 60%;
-    vertical-align: middle;
-    top: 0;
-    /*margin: 5%, 0px;*/
-    display: inline-block;
-    color: rgb(200,200,200);
-    text-align: center;
-    padding: 16px 27.9px;
-    text-decoration: none;
-}
-
-#header a:hover, a:active {
-  color: rgb(255,255,255);
-  background-color: rgb(100,100,100);
+body {
+    margin:0;
+    background-color: #e6e6e6;
+    font-family: 'Droid Sans', sans-serif;
 }
 
 
-/*ul {
-  align-self: center;
+.header {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.header a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-li {
+.header a:hover {
+  background-color: rgb(100, 100, 100);
+  color: rgb(255, 255, 255);
+}
+
+.header .icon {
+  display: none;
+}
+
+.kontakt-form {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font-family: 'Droid Sans', sans-serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+}
+.kontakt-form h1 {
+    font-size: 2em;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+}
+.kontakt-form h1>span {
+    display: block;
+    font-size: 1em;
+}
+.kontakt-form label {
+    display: block;
+    margin: 0px;
+}
+.kontakt-form label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #888;
+}
+.kontakt-form input[type="text"], .kontakt-form input[type="email"], .kontakt-form textarea, .kontakt-form select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.kontakt-form textarea{
+    padding: 5px 3px 3px 5px;
+}
+.kontakt-form select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right);
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+.kontakt-form textarea{
+    height:100px;
+}
+.kontakt-form .button {
+    background: rgb(80,80,80);
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;
+}
+.kontakt-form .button:hover {
+    background: rgb(100,200,100);
+}
+
+#message_div {
+  background-color: green;
   display: inline-block;
-  width: 24%;
-  height: 100%;
-  border: 5px solid red;
+  width: 30%;
+  padding: 20px 5%;
+  border: 2px solid black;
+}
+
+#about_us_div {
+}
+
+#about_us_h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+#about_us_div h2 {
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+#about_us_hr_top {
+    width: 95%;
+    color:grey;
+}
+#about_us_div_hr {
+    width: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child) {display: none;}
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon { position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
 }
-*/
