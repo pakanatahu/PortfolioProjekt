@@ -7,13 +7,26 @@ function resize_header() {
     }
 }
 
+var inputfields = ["#name", "#telenr", "email", "#message"];
 $(document).ready(function(){
-    $("#message_button").click(function(){
-        var m_name = $('#message_name').val();
-        var m_number = $('#message_number').val();
-        var m_email = $('#message_email').val();
-        var m_text = $('#message_text').val();
 
+    var nameIsOk = false;
+
+    if(inputfields[0].focus(function(){
+
+      console.log($(this).val().length), 100};)
+    ){
+
+    }
+    });
+
+
+
+/*
+var m_name = $('#name').val();
+var m_number = $('#telenr').val();
+var m_email = $('#email').val();
+var m_text = $('#message').val();
         if (m_name == "" | m_name == "" | m_name == "" | m_name == "") {
             alert("empty");
         }
@@ -22,6 +35,4 @@ $(document).ready(function(){
         } else {
             alert("no");
         }
-	
-    });
-});
+*/

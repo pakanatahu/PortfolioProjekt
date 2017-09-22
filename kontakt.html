@@ -14,29 +14,48 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="resize_header()">&#9776;</a>
 </div>
 <div id="wrapper">
-  <form class="kontakt-form" action="" method="post">
-      <h1>Kontakta Oss</h1>
-      <label>
-          <span>Namn :</span>
-          <input id="name" type="text" name="name" placeholder="Ditt f&ouml;r och efternamn" />
+  <form class="kontakt-form" id="message-form"action="" method="post">
+      <legend>Kontakta Oss</legend>
+      <hr/>
+      <label class="firstLabel" for="name-input">
+          <span>Namn</span>
+          <input id="name" type="text" name="name" placeholder="Ditt f&ouml;r och efternamn" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ditt f&ouml;r och efternamn'" />
       </label>
 
       <label>
-          <span>Email :</span>
-          <input id="email" type="email" name="email" placeholder="Giltlig email adress" />
+          <span for="email-input">Email</span>
+          <input id="email" type="email" name="email" placeholder="Ange giltlig email adress" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ange giltlig email adress'" />
       </label>
-
       <label>
-          <span>Meddelande :</span>
-          <textarea id="message" name="message" placeholder="Ditt meddelande till oss"></textarea>
+          <span for="number-input">Telefon</span>
+          <input id="telenr" type="number" name="telenr" placeholder="Ange ditt telefonnummer" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ange ditt telefonnummer'" />
+      </label>
+      <label>
+          <span for="message-input">Meddelande</span>
+          <textarea id="message" name="message" placeholder="Ditt meddelande till oss" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ditt meddelande till oss'"></textarea>
       </label>
        <label>
-          <span>&nbsp;</span>
-          <input type="button" class="button" value="Skicka" />
+        <!--  <span>&nbsp;</span>  Hårt mellanslag-
+          <input type="button" id="message_button "class="button" value="Skicka"/>
+        -->
+        <button id="message_button">Skicka</button>
       </label>
   </form>
+  <div id="location">
+    <h1 class="firstLabel">Eller besök oss i Aula Nova</h1>
+<hr/>
+    <div id="map">
+    </div>
+  </div>
 </div>
-<script src="script.js"></script>
+
+
+<!-- JQUERY -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Google Maps Api -->
+<script src="script.js"></script>
+<script src="contactValidation.js"></script>
+<script src="map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfttIFuDinpLvZyg9tsCDk4a3Raspj1Rw&callback=initMap"></script>
 </body>
 </html>

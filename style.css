@@ -15,6 +15,9 @@ body {
     float: right;
     display: block;
   }
+  .location {
+
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -97,6 +100,14 @@ body {
 
 /* --- KONTAKT FORM STYLE --- */
 
+.kontakt-form #name input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+.kontakt-form #name input.valid, textarea.valid{
+	border: 2px solid green;
+}
+
 .kontakt-form {
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
     margin: 0px auto;
@@ -145,7 +156,8 @@ body {
     color: #888;
 }
 .kontakt-form input[type="text"], .kontakt-form input[type="email"], .kontakt-form input[type="number"], .kontakt-form textarea {
-    border: 1px outset rgba(10, 10, 10, 0.19);
+    /*border: 1px outset rgba(10, 10, 10, 0.19);*/
+    border: 1px solid gray;
     color: rgb(80,80,80);
     height: 25px;
     margin: 2px 6px 16px 0px;
