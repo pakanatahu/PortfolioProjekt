@@ -5,6 +5,32 @@ body {
 }
 
 
+
+/* --- HEADER STYLE --- */
+
+
+@media screen and (max-width: 600px) {
+  .header a:not(:first-child) {display: none;}
+  .header a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header.responsive {position: relative;}
+  .header.responsive .icon { position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
 .header {
   overflow: hidden;
   background-color: #333;
@@ -30,26 +56,71 @@ body {
   display: none;
 }
 
+/* --- CONCACT STYLE --- */
+
+#wrapper {
+  width: 100%;
+  padding: 20px 20px;
+  text-align: left;
+}
+
+
+
+/* --- KONTAKT LOCATION STYLE --- */
+
+#location {
+  padding-top: 20px;
+  width: 40%;
+  min-width: 400px;
+  max-width: 600px;
+  display: inline-block;
+  background: rgb(245,245,245);
+  position: absolute;
+  margin-left: 10px;
+  border:1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+}
+
+#location .firstLabel {
+  margin-top: -20px;
+  min-width: 90%;
+  font-weight: lighter;
+  text-align: center;
+}
+
+#map {
+  height: 200px;
+  width: 90%;
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+/* --- KONTAKT FORM STYLE --- */
+
 .kontakt-form {
-    margin-left:auto;
-    margin-right:auto;
-    max-width: 500px;
-    background: #F7F7F7;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    margin: 0px auto;
+    max-width: 600px;
+    min-width: 500px;
+    width: 45%;
+    display: inline-block;
+    background: rgb(245,245,245);
     padding: 25px 15px 25px 10px;
     font-family: 'Droid Sans', sans-serif;
-    color: #888;
+    color: #666;
     text-shadow: 1px 1px 1px #FFF;
-    border:1px solid #E4E4E4;
+
+
 }
-.kontakt-form h1 {
+.kontakt-form legend {
+    width: 96%;
+    text-align: center;
     font-size: 2em;
     padding: 0px 0px 10px 40px;
-    display: block;
-    border-bottom:1px solid #E4E4E4;
-    margin: -10px -15px 30px -10px;;
-    color: #888;
+    margin: -10px -15px 5px -10px;;
+    color: #555;
 }
-.kontakt-form h1>span {
+.kontakt-form legend>span {
     display: block;
     font-size: 1em;
 }
@@ -57,6 +128,14 @@ body {
     display: block;
     margin: 0px;
 }
+
+.firstLabel {
+  padding-top : 18px;
+  font-family: 'Droid Sans', sans-serif;
+  color: #666;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
 .kontakt-form label>span {
     float: left;
     width: 20%;
@@ -65,61 +144,62 @@ body {
     margin-top: 10px;
     color: #888;
 }
-.kontakt-form input[type="text"], .kontakt-form input[type="email"], .kontakt-form textarea, .kontakt-form select {
-    border: 1px solid #DADADA;
-    color: #888;
-    height: 30px;
-    margin-bottom: 16px;
-    margin-right: 6px;
-    margin-top: 2px;
+.kontakt-form input[type="text"], .kontakt-form input[type="email"], .kontakt-form input[type="number"], .kontakt-form textarea {
+    border: 1px outset rgba(10, 10, 10, 0.19);
+    color: rgb(80,80,80);
+    height: 25px;
+    margin: 2px 6px 16px 0px;
     outline: 0 none;
     padding: 3px 3px 3px 5px;
     width: 70%;
-    font-size: 12px;
+    font-size: 1em;
     line-height:15px;
-    box-shadow: inset 0px 1px 4px #ECECEC;
-    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
-    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+    box-shadow: outset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: outset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: outset 0px 1px 4px #ECECEC;
 }
 .kontakt-form textarea{
     padding: 5px 3px 3px 5px;
-}
-.kontakt-form select {
-    background: #FFF url('down-arrow.png') no-repeat right;
-    background: #FFF url('down-arrow.png') no-repeat right);
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
-    width: 70%;
-    height: 35px;
-    line-height: 25px;
-}
-.kontakt-form textarea{
+    resize : none;
+    font-size: 1em;
     height:100px;
 }
-.kontakt-form .button {
+
+
+
+.kontakt-form #message_button {
     background: rgb(80,80,80);
     border: none;
-    padding: 10px 25px 10px 25px;
+    padding: 10px 25px;
     color: #FFF;
     box-shadow: 1px 1px 5px #B6B6B6;
     border-radius: 3px;
     text-shadow: 1px 1px 1px #9E3F3F;
     cursor: pointer;
+    float: right;
+    margin-right: 13px;
 }
 .kontakt-form .button:hover {
     background: rgb(100,200,100);
 }
 
-#message_div {
-  background-color: green;
-  display: inline-block;
-  width: 30%;
-  padding: 20px 5%;
-  border: 2px solid black;
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: rgba(80,80,80,0.4);
 }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: rgba(80,80,80,0.4);;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: rgba(80,80,80,0.4);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgba(80,80,80,0.4);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgba(80,80,80,0.4);
+}
+
+/* --- OM OSS STYLE --- */
 
 #about_us_div {
 }
@@ -140,26 +220,4 @@ body {
 }
 #about_us_div_hr {
     width: 90%;
-}
-
-@media screen and (max-width: 600px) {
-  .header a:not(:first-child) {display: none;}
-  .header a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header.responsive {position: relative;}
-  .header.responsive .icon { position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .header.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
 }
