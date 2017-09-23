@@ -1,6 +1,12 @@
+/* --- GENERELL STYLE --- */
+
 body {
     margin:0;
-    background-color: #e6e6e6;
+    background: #e6e6e6; 
+    background: -webkit-linear-gradient(#e6e6e6, #b8b8b8, #8a8a8a) fixed; 
+    background: -o-linear-gradient(#e6e6e6, #b8b8b8, #8a8a8a) fixed;
+    background: -moz-linear-gradient(#e6e6e6, #b8b8b8, #8a8a8a) fixed;
+    background: linear-gradient(#e6e6e6, #b8b8b8, #8a8a8a) fixed;
     font-family: 'Droid Sans', sans-serif;
 }
 
@@ -9,7 +15,7 @@ body {
 /* --- HEADER STYLE --- */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .header a:not(:first-child) {display: none;}
   .header a.icon {
     float: right;
@@ -20,7 +26,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .header.responsive {position: relative;}
   .header.responsive .icon { position: absolute;
     right: 0;
@@ -59,7 +65,7 @@ body {
   display: none;
 }
 
-/* --- CONCACT STYLE --- */
+/* --- CONTACT STYLE --- */
 
 #wrapper {
   width: 100%;
@@ -213,23 +219,151 @@ body {
 
 /* --- OM OSS STYLE --- */
 
-#about_us_div {
+#about_us_wrapper {
+  width: 90%;
+  padding: 20px 20px;
 }
 
-#about_us_h1 {
+#about_us_wrapper h1 {
     text-align: center;
     font-size: 3em;
 }
 
-#about_us_div h2 {
-    margin-left: 10%;
+.about_us_div {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 30%;
+}
+
+.about_us_div p:hover, h2:hover {
+    color: #8a8a8a;
+}
+
+.about_us_div p {
+    float: left;
+    width: 40%;
+    padding-left: 20%;
+}
+
+.about_us_div h2 {
+    float: left;
     font-size: 2em;
 }
+
 
 #about_us_hr_top {
     width: 95%;
     color:grey;
 }
-#about_us_div_hr {
+
+.about_us_div_hr {
     width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .about_us_div {
+      width: 80%;
+      height: 40%;
+      padding-left: 20%;
+  }
+
+  .about_us_div p, h2 {
+      float: left;
+      width: 80%;
+      padding-left: 0;
+  }
+
+}
+
+/* --- HÄMTADE GITHUB TABELLER STYLE --- */
+
+#top_5_div {
+    text-align: center;
+}
+
+#top_5_div_javascript {
+    display: inline-block;
+}
+
+#top_5_div_css {
+    display: inline-block;
+}
+
+#top_5_table {
+    max-width: 90%;
+    float: left;
+    display: inline-block;
+    background-color: #b8b8b8;
+}
+
+#top_5_table tr, td, th, a, i {
+    max-width: 90%;
+    text-align: left;
+    padding: 6px;
+}
+
+#top_5_div a {
+    text-decoration: none;
+    color: black;
+}
+
+#top_5_div a:hover {
+    text-decoration: none;
+    color: #8a8a8a;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #top_5_div {
+      text-align: center;
+  }
+
+  #top_5_div_javascript {
+      display: block;
+  }
+
+  #top_5_div_css {
+      display: block;
+  }
+
+}
+
+/* --- PERSONLIG SIDA STYLE --- */
+
+.personal_page_img {
+    border-radius: 25px;
+
+}
+
+#personal_skill_bar_wrapper {
+}
+
+.SkillBar {
+    border-radius: 25px;
+    width: 70%;
+    height: 50px;
+    position: relative;
+    background: rgba(17, 17, 17, .3);
+    margin: 20px auto;
+}
+
+.personal_skills_text {
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    color: #e6e6e6;
+    font-size: 18px;
+}
+.personal_skills_percent {
+    z-index: 3;
+    position: relative;
+    padding-right: 15px;
+    margin-top: 15px;
+    float: right;
+    text-shadow: none;
+    color: #e6e6e6;
+    //font-family: Lato-Regular, sans-serif;
+    font-size: 18px;
 }
