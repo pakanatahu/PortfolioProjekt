@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="slideheader">
+        <h1 class="text-muted">Våra utförda projekt</h1>
+        <h4 class="text-muted">I bildspelet nedan kan ni se slutprodukten av hemsidor vi utvecklat.</h4>
+    </div>
+
+    <div class="slideshow">
+        <ul class="images">
+            <li class="image image1"><img src="https://images.template.net/wp-content/uploads/2017/01/31214659/Free-Responsive-Bootstrap-Charity-Theme-min.jpg%22%3E</li>
+            <li class="image image2"><img src="https://startbootstrap.com/assets/img/premium/flex-admin.jpg%22%3E</li>
+            <li class="image image3"><img src="https://bootstrapbay.com/public/images/themes/B4D153A.png%22%3E</li>
+            <li class="image image4"><img src="https://images.template.net/wp-content/uploads/2015/01/Bootstrap-SET-3-templates-responsive.jpg%22%3E</li>
+            <li class="image image5"><img src="https://cdn.shopify.com/s/files/1/0691/5403/products/application-screenshot_51b916f0-98cf-495e-be22-e670dcd0711f_1024x1024.jpg?v=1439964115%22%3E</li>
+            <li class="image image1"><img src="https://images.template.net/wp-content/uploads/2017/01/31214659/Free-Responsive-Bootstrap-Charity-Theme-min.jpg%22%3E</li>
+        </ul>
+    </div>
+
+</div>
+<br>
+<div class="container">
+    <div class="slideshow">
+            <ul class="images">
+                <li class="image image1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                <li class="image image2">2222</li>
+                <li class="image image3">3333</li>
+                <li class="image image4">4444</li>
+                <li class="image image5">5555</li>
+                <li class="image image1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            </ul>
+    </div>
+</div>

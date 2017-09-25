@@ -2,6 +2,7 @@
 // Laddar personliga sidans javascript.
 // Henrik
 function load_skills_henrik() {
+    spawn_skillbar('HTML', '100', 'yellow')
     spawn_skillbar('CSS', '40', 'white')
     spawn_skillbar('JQUERY', '50', 'blue');
     
@@ -21,7 +22,7 @@ function spawn_skillbar(skill, value, bar_color) {
     var skill_text = document.createElement('SPAN');
     var skill_percent = document.createElement('SPAN');
     
-    skill_div.className = 'SkillBar';
+    skill_div.className = 'personal_skill_bar';
     skill_inner_div.id = 'Skill-' + skill;
     skill_text.className = 'personal_skills_text';
     skill_percent.className = 'personal_skills_percent';
@@ -135,6 +136,7 @@ function get_top_5(top_url, program_language) {
 	$('#top_5_div_css').hide().fadeIn('slow');
     });
 }
+
 /*
 var inputfields = ["#name", "#telenr", "email", "#message"];
 $(document).ready(function(){
@@ -161,4 +163,53 @@ var m_text = $('#message').val();
         } else {
             alert("no");
         }
+
+
 */
+    var width = 620;
+    var currentText = 1;
+    var currentSlide = 1;
+
+    var slideshow = $('.slideshow');
+    var slideContainer = $('.images', slideshow);
+    var images = $('.image', slideshow);
+    var textshow = $('.textshow');
+    var textContainer = $('.texts', textshow);
+    var texts = $('.text', textshow);
+
+    var interval;
+    
+function startSlider() {
+
+    interval = setInterval(function() {
+        textContainer.animate({'margin-left': '-='+width}, 1000, function() {
+            if (++currentText === texts.length) {
+                currentText = 1;
+                
+                textContainer.css('margin-left', 0);
+            }
+        });
+        
+            
+
+        slideContainer.animate({'margin-left': '-='+width}, 1000, function() {
+            if (++currentSlide === images.length) {
+                currentSlide = 1;
+                slideContainer.css('margin-left', 0);
+                textContainer.css('margin-left', 0);
+            }
+            
+
+        });
+    }, 10000);
+}
+
+function pauseSlider() {
+    clearInterval(interval);
+}
+
+slideContainer
+    .on('mouseenter', pauseSlider)
+    .on('mouseleave', startSlider);
+
+startSlider();

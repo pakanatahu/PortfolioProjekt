@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,7 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="resize_header()">&#9776;</a>
 </div>
 <div id="wrapper">
+<<<<<<< HEAD
   <form class="kontakt-form" id="message-form"action="" method="post">
       <legend>Kontakta Oss</legend>
       <hr/>
@@ -47,8 +49,43 @@
     <div id="map">
     </div>
   </div>
+=======
+  <div class="contact_div">
+  <form class="kontakt-form" id="message-form"action="" method="post">
+      <legend>Kontakta Oss</legend>
+      <hr/>
+      <label class="firstLabel" for="name-input">
+          <span>Namn</span>
+          <input id="name" type="text" name="name" placeholder="Ditt f&ouml;r och efternamn" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ditt f&ouml;r och efternamn'" />
+      </label>
+      <label>
+          <span for="email-input">Email</span>
+          <input id="email" type="email" name="email" placeholder="Ange giltlig email adress" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ange giltlig email adress'" />
+      </label>
+      <label>
+          <span for="number-input">Telefon</span>
+          <input id="telenr" type="number" name="telenr" placeholder="Ange ditt telefonnummer" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ange ditt telefonnummer'" />
+      </label>
+      <label>
+          <span for="message-input">Meddelande</span>
+          <textarea id="message" name="message" placeholder="Ditt meddelande till oss" onfocus="this.placeholder =''" onblur="this.placeholder = 'Ditt meddelande till oss'"></textarea>
+      </label>
+       <label>
+        <!--  <span>&nbsp;</span>  Hårt mellanslag-
+          <input type="button" id="message_button "class="button" value="Skicka"/>
+        -->
+        <button id="message_button">Skicka</button>
+      </label>
+  </form>
+  <div id="location">
+    <h1 class="firstLabel">Eller besök oss i Aula Nova</h1>
+<hr/>
+    <div id="map">
+    </div>
+  </div>
+>>>>>>> origin/master
 </div>
-
+</div>
 
 <!-- JQUERY -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
