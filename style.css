@@ -100,7 +100,6 @@ body {
 
 #wrapper {
   width: 100%;
-  padding: 20px 20px;
   text-align: left;
 }
 
@@ -109,20 +108,16 @@ body {
 /* --- KONTAKT LOCATION STYLE --- */
 
 #location {
-  padding-top: 20px;
   width: 40%;
-  min-width: 400px;
-  max-width: 600px;
   display: inline-block;
   background: rgb(245,245,245);
-  position: absolute;
   margin-left: 10px;
   border:1px solid rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
 }
 
+
 #location .firstLabel {
-  margin-top: -20px;
   min-width: 90%;
   font-weight: lighter;
   text-align: center;
@@ -146,10 +141,9 @@ body {
 }
 
 .kontakt-form {
+    margin-left: 5%;
+    margin-top: 5%;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
-    margin: 0px auto;
-    max-width: 600px;
-    min-width: 500px;
     width: 45%;
     display: inline-block;
     background: rgb(245,245,245);
@@ -157,9 +151,8 @@ body {
     font-family: 'Droid Sans', sans-serif;
     color: #666;
     text-shadow: 1px 1px 1px #FFF;
-
-
 }
+
 .kontakt-form legend {
     width: 96%;
     text-align: center;
@@ -214,8 +207,6 @@ body {
     height:100px;
 }
 
-
-
 .kontakt-form #message_button {
     background: rgb(80,80,80);
     border: none;
@@ -248,11 +239,32 @@ body {
    color: rgba(80,80,80,0.4);
 }
 
+@media screen and (max-width: 768px) {
+    .contact_div {
+	width: 90%;
+    }
+
+    #location {
+	width: 95%;
+	margin-top: 5%;
+	margin-left: 5%;
+    }
+
+    #map {
+	width: 85%;
+    }
+
+    .kontakt-form {
+	width: 90%;
+    }
+
+}
+
+
 /* --- OM OSS STYLE --- */
 
 #about_us_wrapper {
-  width: 90%;
-  padding: 20px 20px;
+
 }
 
 #about_us_wrapper h1 {
@@ -322,16 +334,19 @@ body {
 }
 
 #top_5_table {
+    border-collapse: collapse;
+    border: 1px solid black;
     max-width: 90%;
     float: left;
     display: inline-block;
     background-color: #b8b8b8;
 }
 
-#top_5_table tr, td, th, a, i {
+#top_5_table tr, td, th {
     max-width: 90%;
     text-align: left;
     padding: 6px;
+    border: 1px solid black;
 }
 
 #top_5_div a {
@@ -348,59 +363,113 @@ body {
 @media screen and (max-width: 768px) {
 
     #top_5_div {
-	margin-left: 10%;
 	text-align: center;
-  }
+    }
+
+    #top_5_table {
+	margin-left: 5%;
+    }
+
+    #top_5_table tr, td, th, a, i {
+	width: 25%;
+	text-align: left;
+	padding: 0px;
+    }
 
     #top_5_div_javascript {
-	max-width: 100px;
-	display: block;
+	margin-left: 0;
     }
 
     #top_5_div_css {
-	max-width: 100px;
+	margin-left: 0;
     }
-
-  #top_5_div_css {
-      display: block;
-  }
 
 }
 
-/* --- PERSONLIG SIDA STYLE --- */
+/* --- PERSONLIG SIDA HENRIK STYLE --- */
+
+.personal_page_wrapper {
+    width: 90%;
+    display: inline-block;
+}
+
+.personal_page_wrapper h2 {
+    text-align: center;
+    font-size: 3em;
+}
 
 .personal_page_img {
+    float: left;
     border-radius: 25px;
+    width: 30%;
+    margin-left: 20%;
+}
 
+.personal_page_text {
+    margin-left: 10%;
+    float: left;
+    width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    .personal_page_wrapper {
+	width: 80%;
+
+    }
+
+    .personal_page_wrapper h2 {
+	margin-left: 20%;
+    }
+    .personal_page_img {
+	width: 80%;
+
+    }
+
+    .personal_page_text {
+	width: 80%;
+	padding-left: 5%;
+
+    }
 }
 
 #personal_skill_bar_wrapper {
+    margin-left: 30%;
 }
 
-.SkillBar {
+.personal_skill_bar {
     border-radius: 25px;
     width: 70%;
-    height: 50px;
-    position: relative;
+    height: 10%;
     background: rgba(17, 17, 17, .3);
-    margin: 20px auto;
+    margin-top: 1%;
 }
 
 .personal_skills_text {
     float: left;
     margin-top: 15px;
     margin-left: 25px;
-    color: #e6e6e6;
+    color: black;
     font-size: 18px;
 }
 .personal_skills_percent {
-    z-index: 3;
-    position: relative;
+
     padding-right: 15px;
     margin-top: 15px;
     float: right;
     text-shadow: none;
-    color: #e6e6e6;
-    //font-family: Lato-Regular, sans-serif;
+    color: black;
     font-size: 18px;
 }
+
+@media screen and (max-width: 768px) {
+
+    #personal_skill_bar_wrapper {
+	margin-left: 0px;
+    }
+    
+    .personal_skill_bar {
+	width: 100%;
+    }
+ 
+}
+    
