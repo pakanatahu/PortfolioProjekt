@@ -65,6 +65,37 @@ body {
   display: none;
 }
 
+/* --- PORTFOLIO STYLE ---*/
+
+.container {
+    width: 650px;
+    margin: 0 auto;
+    
+}
+
+.slideshow, .textshow {
+    width: 620px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow .images, .textshow .texts {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.slideshow .image, .textshow .text {
+    float: left;
+    list-style-type: none;
+    width: 620px;
+    height: 400px;
+}
+
+
 /* --- CONTACT STYLE --- */
 
 #wrapper {
@@ -316,13 +347,19 @@ body {
 
 @media screen and (max-width: 768px) {
 
-  #top_5_div {
-      text-align: center;
+    #top_5_div {
+	margin-left: 10%;
+	text-align: center;
   }
 
-  #top_5_div_javascript {
-      display: block;
-  }
+    #top_5_div_javascript {
+	max-width: 100px;
+	display: block;
+    }
+
+    #top_5_div_css {
+	max-width: 100px;
+    }
 
   #top_5_div_css {
       display: block;

@@ -162,3 +162,50 @@ var m_text = $('#message').val();
             alert("no");
         }
 */
+
+
+function startSlider() {
+    var width = 620;
+    var currentText = 1;
+    var currentSlide = 1;
+
+    var slideshow = $('.slideshow');
+    var slideContainer = $('.images', slideshow);
+    var images = $('.image', slideshow);
+    var textshow = $('.textshow');
+    var textContainer = $('.texts', textshow);
+    var texts = $('.text', textshow);
+
+    var interval;
+    
+    interval = setInterval(function() {
+        textContainer.animate({'margin-left': '-='+width}, 1000, function() {
+            if (++currentText === texts.length) {
+                currentText = 1;
+                
+                textContainer.css('margin-left', 0);
+            }
+        });
+        
+            
+
+        slideContainer.animate({'margin-left': '-='+width}, 1000, function() {
+            if (++currentSlide === images.length) {
+                currentSlide = 1;
+                slideContainer.css('margin-left', 0);
+                textContainer.css('margin-left', 0);
+            }
+            
+
+        });
+    }, 10000);
+}
+
+function pauseSlider() {
+    clearInterval(interval);
+}
+
+slideContainer
+    .on('mouseenter', pauseSlider)
+    .on('mouseleave', startSlider);
+});
